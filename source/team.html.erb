@@ -1,8 +1,8 @@
 <ul class="list-inline text-center">
-  <% ["seb", "anne", "romain"].each do |member| %>
+  <% data.flats.each do |member, flat| %>
     <li>
-      <%= image_tag "#{member}.jpg", class: "img-circle avatar-large" %>
-      <h3><%= member.capitalize %></h3>
+      <%= image_tag "#{flat.owner_picture}", class: "img-circle avatar-large" %>
+      <%= link_to "<h3>#{flat.name.capitalize}</h3>", "flats/#{member}.html" %>
     </li>
   <% end %>
 </ul>
